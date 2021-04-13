@@ -7,12 +7,11 @@ function QuoteCard({ simpson }) {
       <div className='QuoteCard'>
         <img src={simpson.image} alt={simpson.character} />
         <ul>
-          <li>Character: {simpson.character}</li>
+          <li>Who I am ? {simpson.character}</li>
           <li>
-            Quote: {simpson.quote}
+            Whats I am saying ?  {simpson.quote}
           </li>
           <li>Character Direction: {simpson.characterDirection}</li>
-        
         </ul>
       </div>
     )

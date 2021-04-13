@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import QuoteCard from './components/quoteCard';
+import axios from 'axios';
 
 
 const quote = {
@@ -20,12 +21,12 @@ function App() {
       .then((response) => response.data)
       // Use this data to update the state
       .then((data) => {
-        setSimpson(data.results[0]);
-      });
+        console.log(data);
+        setSimpson(data[0]);
+      })
+      .catch(console.error)
   };
 
-
- 
   return (
     <div className='App'>
     <QuoteCard simpson ={simpson}/>
